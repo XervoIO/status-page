@@ -47,17 +47,30 @@ img {
 // HEADER
 
 header {
+  text-align: center;
+
   .logo {
+    margin: auto;
+    margin-top: 20px;
     margin-bottom: 0;
-    margin-right: 20px;
     width: 193px;
     height: 52px;
+    float: none;
+
+    @media @md {
+      margin-right: 20px;
+      float: left;
+    }
   }
 
   nav {
+    margin-top: 10px;
     overflow: auto;
-    margin-top: 35px;
     border-bottom: 1px solid @colorGreen;
+
+    @media @md {
+      margin-top: 35px;
+    }
   }
 
   .title {
@@ -66,15 +79,28 @@ header {
     letter-spacing: 1px;
     padding-left: 10px;
     font-size: 16px;
+    margin-bottom: 5px;
+
+    @media @md {
+      float: left;
+      margin-bottom: 0px;
+    }
   }
 
-  .back a {
-    color: #CACACB;
+  .back {
 
-    &:hover {
-      text-decoration: none;
-      border-top: 1px solid #E3344D;
-      color: #F0F0F1; 
+    @media @md {
+      float: right;
+    }
+
+    a {
+      color: #CACACB;
+
+      &:hover {
+        text-decoration: none;
+        border-top: 1px solid #E3344D;
+        color: #F0F0F1; 
+      }
     }
   }
 }
@@ -82,8 +108,12 @@ header {
 
 // CURRENT STATUS
 .status {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 40px;
+
+  @media @md {
+    margin-top: 50px;
+  }
 
   .main {
     padding: 30px 15px;
