@@ -5,9 +5,148 @@
     GLOBAL STYLES
    =============================== */
 
+body {
+  background: #262626 url('/img/mod_bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #F0F0F1;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 img {
   max-width: 100%;
 }
+
+.list-group-item {
+  background: none;
+  border: 1px solid #F0F0F1;
+}
+
+// STATUSES
+.operational {
+  background: @colorGreen;
+}
+
+.degraded {
+  background: @colorYellow;
+}
+
+.partial {
+  background: @colorOrange;
+}
+
+.major {
+  background: @colorRed;
+}
+
+
+// HEADER
+
+header {
+  .logo {
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: 193px;
+    height: 52px;
+  }
+
+  nav {
+    overflow: auto;
+    margin-top: 35px;
+    border-bottom: 1px solid @colorGreen;
+  }
+
+  .title {
+    text-rendering: optimizelegibility;
+    text-shadow: 0 1px 0 #1F1F1F;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  .back a {
+    color: #CACACB;
+
+    &:hover {
+      text-decoration: none;
+      border-top: 1px solid #E3344D;
+      color: #F0F0F1; 
+    }
+  }
+}
+
+
+// CURRENT STATUS
+.status {
+  margin-top: 50px;
+  margin-bottom: 40px;
+
+  .main {
+    padding: 30px 15px;
+
+    .status-icon {
+      position: absolute;
+      margin-top: 10px;
+      height: 30px;
+      width: 30px;
+      border-radius: 40px;
+    }
+
+    .current-status {
+      margin-left: 45px;
+
+      h4 {
+        font-size: 30px;
+      }
+
+      p {
+        margin-bottom: 0px;
+      }
+
+      span {
+        font-size: 14px;
+        color: #ccc;
+      }
+    }
+  }
+
+  span {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+// HISTORY {
+.day {
+  margin-bottom: 40px;
+
+  h3 {
+    border-bottom: 1px solid #6B6B6B;
+    padding-bottom: 4px;
+    font-size: 16px;
+  }
+
+  span {
+    color: #ccc;
+  }
+
+  span.status-icon {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    position: relative;
+    top: 2px;
+  }
+}
+
 
 
 // MISCELLANEOUS

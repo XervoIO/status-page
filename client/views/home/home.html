@@ -1,3 +1,54 @@
 <template name="home">
-  Welcome to my new meteor app
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <ul class="status list-group">
+          <li class="list-group-item main">
+            <div class="status-icon partial"></div>
+            <div class="current-status">
+              <h4>We are experiencing a partial API outage.</h4>
+              <p>Our team is investigating an issue with our API.</p>
+              <span>Refreshed 1 min ago</span>
+            </div>
+          </li>
+          <li class="list-group-item">Deployments<span class="operational pull-right"></span></li>
+          <li class="list-group-item">Balancers<span class="operational pull-right"></span></li>
+          <li class="list-group-item">API<span class="partial pull-right"></span></li>
+          <li class="list-group-item">Database<span class="degraded pull-right"></span></li>
+          <li class="list-group-item">Host<span class="operational pull-right"></span></li>
+        </ul>
+
+        <h3>Past Incidents</h3>
+
+        <div class="day">
+          <h3>Monday, January 20th, 2014</h3>
+          <p>
+            <span class="status-icon partial"></span> We are experiencing a partial API outage. <span>3:12 PM</span>
+          </p>
+          <p>
+            <span class="status-icon operational"></span> All systems go. <span>9:30 AM</span>
+          </p>
+        </div>
+        
+        <div class="day">
+          <h3>Sunday, January 19th, 2014</h3>
+          <p>
+            <span class="status-icon partial"></span> We are experiencing a partial API outage. <span>10:28 PM</span>
+          </p>
+        </div>
+        
+        <div class="day">
+          <h3>Saturday, January 18th, 2014</h3>
+          <p>No incidents reported.</p>
+        </div>
+        
+        <div class="day">
+          <h3>Friday, January 17th, 2014</h3>
+          <p>No incidents reported.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </template>
