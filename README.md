@@ -1,3 +1,6 @@
-# meteor-boilerplate
+# status-page
 
-See our [documentation](http://github.differential.io/meteor-boilerplate/)
+Meteor app that drives the Modulus status page.
+
+**Under development**
+
