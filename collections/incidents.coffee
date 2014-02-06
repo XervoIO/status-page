@@ -4,3 +4,17 @@ class @Incident extends Minimongoid
   @belongs_to: [
     {name: 'service'}
   ]
+
+  statusOptions: ->
+    [
+      'operational',
+      'degradedPerformance',
+      'partialOutage',
+      'majorOutage'
+    ]
+
+Meteor.methods
+
+  createIncident: (formData) ->
+    Incident.create(formData)
+

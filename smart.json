@@ -3,6 +3,10 @@
     "iron-router": {},
     "accounts-entry": {},
     "handlebars-server": {},
-    "minimongoid": {}
+    "minimongoid": {},
+    "simple-form": {
+      "path": "/Users/josh/Code/Differential/simple-form" 
+    },
+    "timeago": {}
   }
 }

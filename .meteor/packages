@@ -15,3 +15,6 @@ accounts-entry
 accounts-password
 accounts-github
 minimongoid
+simple-form
+timeago
+headers
