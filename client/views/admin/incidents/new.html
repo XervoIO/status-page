@@ -1,0 +1,14 @@
+<template name="newIncident">
+
+  <form> 
+    <div class="form-group">
+      {{ text_area 'message' class="blah"}}
+      
+      {{ select_box 'status' }}
+
+      {{ select_box 'service' }}
+    </div>
+
+    {{ submit_button }}
+  </form>
+</template>
