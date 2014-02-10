@@ -6,10 +6,9 @@
       "accounts-entry": {},
       "handlebars-server": {},
       "minimongoid": {},
-      "simple-form": {
-        "path": "../simple-form"
-      },
-      "timeago": {}
+      "simple-form": {},
+      "timeago": {},
+      "moment": {}
     },
     "packages": {
       "iron-router": {
@@ -19,8 +18,8 @@
       },
       "accounts-entry": {
         "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.5.1",
-        "commit": "b8b44fbefbc5998f4cd612c98c1e892be7d37bb3"
+        "tag": "v0.5.3",
+        "commit": "20641be951a1a2e563cd2e6bf552f2cc8fe03984"
       },
       "handlebars-server": {
         "git": "https://github.com/EventedMind/meteor-handlebars-server.git",
@@ -33,22 +32,24 @@
         "commit": "8a4849426f1775f9886f303067e50877696fae43"
       },
       "simple-form": {
-        "path": "../simple-form"
+        "git": "https://github.com/BeDifferential/simple-form.git",
+        "tag": "v0.0.20",
+        "commit": "fdba8e6604bfd71668304561a4fe6db3295bd1e9"
       },
       "timeago": {
         "git": "https://github.com/BeDifferential/timeago.git",
         "tag": "v0.0.3",
         "commit": "39135ea44ba69503d6b1e1e17431a57cb315cb21"
       },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.5.1",
+        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+      },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
         "tag": "v0.1.1",
         "commit": "ce88ac66c0dc107dc2da93ce152616115838101f"
-      },
-      "headers": {
-        "git": "https://github.com/gadicohen/meteor-headers.git",
-        "tag": "v0.0.13",
-        "commit": "1b259f3af3df7a297584b1e2e5e89de8ad1a963a"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

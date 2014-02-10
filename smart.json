@@ -4,9 +4,8 @@
     "accounts-entry": {},
     "handlebars-server": {},
     "minimongoid": {},
-    "simple-form": {
-      "path": "/Users/josh/Code/Differential/simple-form" 
-    },
-    "timeago": {}
+    "simple-form": {},
+    "timeago": {},
+    "moment": {}
   }
 }
