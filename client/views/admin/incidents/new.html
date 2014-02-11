@@ -1,14 +1,23 @@
 <template name="newIncident">
 
-  <form> 
-    <div class="form-group">
-      {{ text_area 'message' class="blah"}}
-      
-      {{ select_box 'status' }}
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
 
-      {{ select_box 'service' }}
+        <form> 
+          <div class="form-group">
+            {{ text_area 'message' class="blah"}}
+            
+            {{ select_box 'status' }}
+
+            {{ select_box 'service' }}
+          </div>
+
+          {{ submit_button }}
+        </form>
+
+      </div>
     </div>
-
-    {{ submit_button }}
-  </form>
+  </div>
+  
 </template>
