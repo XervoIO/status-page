@@ -1,7 +1,10 @@
 {
   "packages": {
     "iron-router": {},
-    "accounts-entry": {},
+    "accounts-entry": {
+      "git": "git@github.com:BeDifferential/accounts-entry.git",
+      "branch": "master"
+    },
     "handlebars-server": {},
     "minimongoid": {},
     "simple-form": {},

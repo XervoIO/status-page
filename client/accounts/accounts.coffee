@@ -4,4 +4,4 @@ Meteor.startup ->
 
   AccountsEntry.config
     homeRoute: '/'
-    dashboardRoute: '/dashboard'
+    dashboardRoute: '/admin/dashboard'

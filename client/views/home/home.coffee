@@ -24,7 +24,7 @@ Template.home.helpers
       incidents[date] = [] unless incidents[date]
     pairs = _.pairs incidents
     sortedData = _.sortBy pairs, (date) ->
-      moment(date[0])
+      -1 * moment(date[0])
     sortedData
 
   timeStamp: (timestamp) ->

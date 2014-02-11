@@ -3,7 +3,10 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "accounts-entry": {},
+      "accounts-entry": {
+        "git": "git@github.com:BeDifferential/accounts-entry.git",
+        "branch": "master"
+      },
       "handlebars-server": {},
       "minimongoid": {},
       "simple-form": {},
@@ -17,9 +20,9 @@
         "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
       },
       "accounts-entry": {
-        "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.5.3",
-        "commit": "20641be951a1a2e563cd2e6bf552f2cc8fe03984"
+        "git": "git@github.com:BeDifferential/accounts-entry.git",
+        "branch": "master",
+        "commit": "a21d529f55216fe3c4ed5e4f830ac6ec226df589"
       },
       "handlebars-server": {
         "git": "https://github.com/EventedMind/meteor-handlebars-server.git",
