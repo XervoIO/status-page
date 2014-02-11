@@ -1,33 +1,42 @@
 <template name="home">
-  <ul class="status list-group">
-    <li class="list-group-item main">
-      {{#with lastIncident}}
-      <div class="status-icon {{status}}"></div>
-      <div class="current-status">
-          <h4>{{message}}</h4>
-          <p>on {{service.name}}</p>
-          <span>{{timeago createdAt}}</span>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <ul class="status list-group">
+          <li class="list-group-item main">
+            {{#with lastIncident}}
+            <div class="status-icon {{status}}"></div>
+            <div class="current-status">
+                <h4>{{message}}</h4>
+                <p>on {{service.name}}</p>
+                <span>{{timeago createdAt}}</span>
+            </div>
+            {{/with}}
+          </li>
+          {{#each services}}
+          <li class="list-group-item">{{name}}<span class="{{latestStatus}} pull-right"></span></li>
+          {{/each}}
+        </ul>
+
+        <h3>Past Incidents</h3>
+
+        {{#each pastIncidents}}
+        <div class="day">
+          <h3>{{[0]}}</h3>
+          {{#each [1]}}
+            <p>
+              <span class="status-icon {{status}}"></span> {{message}} <span>{{timeStamp createdAt}}</span>
+            </p>
+          {{else}}
+            <p>No incidents reported.</p>
+          {{/each}}
+        </div>
+        {{/each}}
+
       </div>
-      {{/with}}
-    </li>
-    {{#each services}}
-    <li class="list-group-item">{{name}}<span class="{{latestStatus}} pull-right"></span></li>
-    {{/each}}
-  </ul>
-
-  <h3>Past Incidents</h3>
-
-  {{#each pastIncidents}}
-  <div class="day">
-    <h3>{{[0]}}</h3>
-    {{#each [1]}}
-      <p>
-        <span class="status-icon {{status}}"></span> {{message}} <span>{{timeStamp createdAt}}</span>
-      </p>
-    {{else}}
-      <p>No incidents reported.</p>
-    {{/each}}
+    </div>
   </div>
-  {{/each}}
   
 </template>
