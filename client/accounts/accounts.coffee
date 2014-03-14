@@ -5,3 +5,4 @@ Meteor.startup ->
   AccountsEntry.config
     homeRoute: '/'
     dashboardRoute: '/admin/dashboard'
+    showSignupCode: true

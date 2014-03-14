@@ -12,8 +12,8 @@ coffeescript
 less
 accounts-ui
 accounts-entry
-accounts-github
 minimongoid
 simple-form
 timeago
 moment
+accounts-password

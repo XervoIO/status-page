@@ -20,3 +20,6 @@ timeago
 moment
 just-i18n
 underscore-string-latest
+/iron-router
+/accounts-entry
+/handlebars-server
