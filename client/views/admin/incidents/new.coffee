@@ -3,4 +3,4 @@ Template.newIncident.events
     event.preventDefault()
     formData = SimpleForm.processForm(event.target)
     Meteor.call('createIncident', formData)
-    Router.go('/admin/incidents')
+    Router.go('/admin/dashboard')

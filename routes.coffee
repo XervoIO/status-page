@@ -3,9 +3,7 @@ AdminController = RouteController.extend
     header:
       to: 'header'
   before: ->
-    unless Meteor.user()
-      @redirect('/sign-in')
-      @stop()
+    AccountsEntry.signInRequired(@)
 
 Router.map ->
   @route 'home',

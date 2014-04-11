@@ -7,7 +7,8 @@
     },
     "handlebars-server": {},
     "minimongoid": {},
-    "simple-form": {},
+    "simple-form": {
+    },
     "timeago": {},
     "moment": {}
   }
