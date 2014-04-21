@@ -2,7 +2,7 @@
   "packages": {
     "iron-router": {},
     "accounts-entry": {
-      "git": "git@github.com:BeDifferential/accounts-entry.git",
+      "git": "https://github.com/Differential/accounts-entry.git",
       "branch": "master"
     },
     "handlebars-server": {},
