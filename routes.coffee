@@ -8,10 +8,15 @@ AdminController = RouteController.extend
 Router.map ->
   @route 'home',
     path: '/'
+    waitOn: ->
+      Meteor.subscribe 'incidents'
+      Meteor.subscribe 'services'
 
   @route 'newIncident',
     controller: AdminController
     path: '/admin/incidents/new'
+    waitOn: ->
+      Meteor.subscribe 'services'
     data: new Incident
 
   @route 'incidents',

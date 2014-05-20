@@ -8,6 +8,8 @@
     "handlebars-server": {},
     "minimongoid": {},
     "simple-form": {
+      "git": "git@github.com:Differential/simple-form.git",
+      "branch": "master"
     },
     "timeago": {},
     "moment": {}
