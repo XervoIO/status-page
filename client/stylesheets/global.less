@@ -50,12 +50,20 @@ img {
   background: @colorGreen;
 }
 
+.outage {
+  background: @colorRed;
+}
+
+.maintenance {
+  background: @colorYellow;
+}
+
 .degradedPerformance {
   background: @colorYellow;
 }
 
 .partialOutage {
-  background: @colorOrange;
+  background: @colorYellow;
 }
 
 .majorOutage {
@@ -70,70 +78,104 @@ header {
 
   .logo {
     margin: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 0;
     width: 193px;
     height: 52px;
     float: none;
-
-    @media @md {
-      margin-right: 20px;
-      float: left;
-    }
-  }
-
-  nav {
-    margin-top: 10px;
-    overflow: auto;
-    border-bottom: 1px solid @colorGreen;
-
-    @media @md {
-      margin-top: 35px;
-    }
-  }
-
-  .title {
-    text-rendering: optimizelegibility;
-    text-shadow: 0 1px 0 #1F1F1F;
-    letter-spacing: 1px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-bottom: 5px;
-
-    @media @md {
-      float: left;
-      margin-bottom: 0px;
-    }
-  }
-
-  .back {
-
-    @media @md {
-      float: right;
-    }
-
-    a {
-      color: #CACACB;
-
-      &:hover {
-        text-decoration: none;
-        border-top: 1px solid #E3344D;
-        color: #F0F0F1; 
-      }
-    }
   }
 }
 
-// LOGIN
 
+// LOGIN
 .entry {
   color: #F0F0F1;
   background: none;
 }
 
 
+// MASTHEAD
+.masthead {
+  text-align: center;
+  margin-top: 30px;
+
+  h1 {
+    color: rgba(0,0,0,0.4);
+    letter-spacing: 1px;
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .status {
+    font-size: 30px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+  }
+
+  .message {
+    font-size: 44px;
+  }
+
+  .time {
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.4);
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+}
+
+// COMPONENT BAR
+.components {
+  background: #555555;
+  text-align: center;
+
+  ul {
+    padding-left: 0px;
+    display: block;
+    margin: auto;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      color: @colorGreen;
+      padding: 20px 40px;
+    }
+  }
+
+  &.operational {
+    background: #318473;
+  }
+
+  &.outage {
+    .selected {
+      background: #a82540;
+      color: rgba(255,255,255,0.5);
+    }
+  }
+
+  &.maintenance {
+    .selected {
+      background: #cd9800;
+      color: rgba(255,255,255,0.5);
+    }
+  }
+}
+
+
+// INCIDENTS
+
+.incidents {
+  h2 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    color: #636363;
+  }
+}
+
+
 // CURRENT STATUS
-.status {
+.status-old {
   margin-top: 20px;
   margin-bottom: 40px;
 
@@ -184,9 +226,12 @@ header {
   margin-bottom: 40px;
 
   h3 {
-    border-bottom: 1px solid #6B6B6B;
     padding-bottom: 4px;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
   }
 
   span {
@@ -195,11 +240,11 @@ header {
 
   span.status-icon {
     display: inline-block;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     border-radius: 15px;
     position: relative;
-    top: 2px;
+    margin-right: 5px;
   }
 }
 

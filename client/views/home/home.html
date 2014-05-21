@@ -1,26 +1,33 @@
 <template name="home">
 
-  <div class="container">
+  <div class="masthead outage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>CURRENT STATUS</h1>
+          {{#with lastIncident}}
+            <p class="status">PARTIAL OUTAGE</p>
+            <p class="message">{{message}}</p>
+            <p class="time">REFRESHED 1 MINUTE AGO</p>
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="components outage">
+    <ul>
+      <li>DEPLOYMENTS</li>
+      <li class="selected">BALANCERS</li>
+      <li>API</li>
+      <li>DATABASE</li>
+      <li class="selected">HOST</li>
+    </ul>
+  </div>
+
+  <div class="incidents container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-
-        <ul class="status list-group">
-          <li class="list-group-item main">
-            {{#with lastIncident}}
-            <div class="status-icon {{status}}"></div>
-            <div class="current-status">
-                <h4>{{message}}</h4>
-                <p>on {{service.name}}</p>
-                <span>{{timeago createdAt}}</span>
-            </div>
-            {{/with}}
-          </li>
-          {{#each services}}
-          <li class="list-group-item">{{name}}<span class="{{latestStatus}} pull-right"></span></li>
-          {{/each}}
-        </ul>
-
-        <h3>Past Incidents</h3>
+      <div class="col-md-6 col-md-offset-3">
+        <h2>PAST INCIDENTS</h2>
 
         {{#each pastIncidents}}
         <div class="day">
@@ -30,7 +37,7 @@
               <span class="status-icon {{status}}"></span> {{message}} <span>{{timeStamp createdAt}}</span>
             </p>
           {{else}}
-            <p>No incidents reported.</p>
+            <p class="text-center">No incidents reported.</p>
           {{/each}}
         </div>
         {{/each}}
