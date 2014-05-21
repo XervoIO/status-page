@@ -19,13 +19,13 @@
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "accounts-entry": {
         "git": "git@github.com:BeDifferential/accounts-entry.git",
         "branch": "master",
-        "commit": "3ed763e9cab6559856420609a2bcc9dc1f843fca"
+        "commit": "a6e3b502e0063774cf41084d55f411a63d59e0b7"
       },
       "handlebars-server": {
         "git": "https://github.com/EventedMind/meteor-handlebars-server.git",
@@ -34,8 +34,8 @@
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
-        "tag": "v0.8.3",
-        "commit": "8a4849426f1775f9886f303067e50877696fae43"
+        "tag": "v0.8.8",
+        "commit": "cf8d0bec44934d617544965977f270f2a8cdca02"
       },
       "simple-form": {
         "git": "git@github.com:Differential/simple-form.git",
@@ -43,24 +43,24 @@
         "commit": "71360a47bd0c039b5e775c12c8ca87ee0e44a859"
       },
       "timeago": {
-        "git": "https://github.com/BeDifferential/timeago.git",
-        "tag": "v0.0.3",
-        "commit": "39135ea44ba69503d6b1e1e17431a57cb315cb21"
+        "git": "https://github.com/Differential/timeago.git",
+        "tag": "v0.0.4",
+        "commit": "60914e8ea3d930febc724febdf137bcd818cb49d"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.5.1",
-        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "accounts-t9n": {
         "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
-        "tag": "v0.0.3",
-        "commit": "d1710f979d6955459d9ce0374df81d22c3c6a6ab"
+        "tag": "v0.0.5",
+        "commit": "ad9539a8818049d5d9fa050d8b2a1f62706483b1"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

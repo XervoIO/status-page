@@ -22,6 +22,9 @@ Router.map ->
   @route 'incidents',
     controller: AdminController
     path: '/admin/dashboard'
+    waitOn: ->
+      Meteor.subscribe 'incidents'
+      Meteor.subscribe 'services'
 
   @route 'notFound',
     path: '*'

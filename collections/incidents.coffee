@@ -18,3 +18,7 @@ Meteor.methods
   createIncident: (formData) ->
     Incident.create(formData)
 
+Incident._collection.allow
+  insert: (userId, incident) ->
+    userId
+
