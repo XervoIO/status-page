@@ -11,7 +11,13 @@ Template.home.helpers
     Service.all()
 
   lastIncident: ->
-    Incident.last()
+    incident = Incident.last()
+    if Session.get('service') isnt undefined
+      service = Session.get('service')
+      incidents = Service.first({name:service}).incidents()
+      if incidents.length > 0
+        incident = incidents[incidents.length - 1]
+    incident
 
   pastIncidents: ->
     startDate = moment().subtract('days', 7)
@@ -32,3 +38,34 @@ Template.home.helpers
 
   service: ->
     @service().name
+
+Template.home.events
+  'click .deployments': (e, t) ->
+    Session.set('service', 'Deployments')
+    removeSelected()
+    console.log t
+    $(t.find('.deployments')).addClass('selected')
+
+  'click .balancers': (e, t) ->
+    Session.set('service', 'Balancers')
+    removeSelected()
+    $(t.find('.balancers')).addClass('selected')
+
+  'click .api': (e, t) ->
+    Session.set('service', 'API')
+    removeSelected()
+    $(t.find('.api')).addClass('selected')
+
+  'click .database': (e, t) ->
+    Session.set('service', 'Database')
+    removeSelected()
+    $(t.find('.database')).addClass('selected')
+
+  'click .host': (e, t) ->
+    Session.set('service', 'Host')
+    removeSelected()
+    $(t.find('.host')).addClass('selected')
+
+removeSelected = ->
+  $(".components li").each ->
+    $(@).removeClass('selected')
