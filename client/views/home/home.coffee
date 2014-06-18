@@ -29,3 +29,6 @@ Template.home.helpers
 
   timeStamp: (timestamp) ->
     moment(timestamp).format("h:mm a")
+
+  service: ->
+    @service().name

@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
           <h1>CURRENT STATUS</h1>
           {{#with lastIncident}}
-            <p class="status">PARTIAL OUTAGE</p>
+            <p class="status">{{status}}</p>
             <p class="message">{{message}}</p>
             <p class="time">REFRESHED 1 MINUTE AGO</p>
           {{/with}}
@@ -36,6 +36,9 @@
             <p>
               <span class="status-icon {{status}}"></span> {{message}} <span>{{timeStamp createdAt}}</span>
             </p>
+            <p>
+              {{service}}
+            </p>
           {{else}}
             <p class="text-center">No incidents reported.</p>
           {{/each}}
@@ -45,5 +48,5 @@
       </div>
     </div>
   </div>
-  
+
 </template>
