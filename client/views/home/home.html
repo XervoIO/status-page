@@ -1,19 +1,20 @@
 <template name="home">
 
-  <div class="masthead outage">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1>CURRENT STATUS</h1>
-          {{#with lastIncident}}
+  {{#with lastIncident}}
+    <div class="masthead {{status}}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>CURRENT STATUS</h1>
             <p class="status">{{status}}</p>
             <p class="message">{{message}}</p>
             <p class="time">REFRESHED 1 MINUTE AGO</p>
-          {{/with}}
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {{/with}}
+
   <div class="components outage">
     <ul>
       <li>DEPLOYMENTS</li>
