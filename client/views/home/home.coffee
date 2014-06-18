@@ -1,12 +1,15 @@
+
+
 Template.home.rendered = ->
 
   #SEO Page Title & Description
   document.title = "My New Meteor App"
   $("<meta>", { name: "description", content: "Page description for My New Meteor App" }).appendTo "head"
 
-  #Highlight the tab w/ highest priority
-  cl = ".#{Incident.priority().service().name.toLowerCase()}"
-  $(cl).addClass('selected')
+  Deps.autorun ->
+    #Highlight the tab w/ highest priority
+    cl = ".#{Incident.priority().service().name.toLowerCase()}"
+    selected(cl)
 
 Template.home.helpers
 
