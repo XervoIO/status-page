@@ -43,29 +43,25 @@ Template.home.helpers
 Template.home.events
   'click .deployments': (e, t) ->
     Session.set('service', 'Deployments')
-    removeSelected()
-    $(t.find('.deployments')).addClass('selected')
+    selected('.deployments')
 
   'click .balancers': (e, t) ->
     Session.set('service', 'Balancers')
-    removeSelected()
-    $(t.find('.balancers')).addClass('selected')
+    selected('.balancers')
 
   'click .api': (e, t) ->
     Session.set('service', 'API')
-    removeSelected()
-    $(t.find('.api')).addClass('selected')
+    selected('.api')
 
   'click .database': (e, t) ->
     Session.set('service', 'Database')
-    removeSelected()
-    $(t.find('.database')).addClass('selected')
+    selected('.database')
 
   'click .host': (e, t) ->
     Session.set('service', 'Host')
-    removeSelected()
-    $(t.find('.host')).addClass('selected')
+    selected('.host')
 
-removeSelected = ->
+selected = (className)->
   $(".components li").each ->
     $(@).removeClass('selected')
+  $(className).addClass('selected')
