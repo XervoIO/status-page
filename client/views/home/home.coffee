@@ -11,7 +11,7 @@ Template.home.helpers
     Service.all()
 
   lastIncident: ->
-    incident = Incident.last()
+    incident = Incident.priority()
     if Session.get('service') isnt undefined
       service = Session.get('service')
       incidents = Service.first({name:service}).incidents()
@@ -43,7 +43,6 @@ Template.home.events
   'click .deployments': (e, t) ->
     Session.set('service', 'Deployments')
     removeSelected()
-    console.log t
     $(t.find('.deployments')).addClass('selected')
 
   'click .balancers': (e, t) ->

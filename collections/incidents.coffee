@@ -26,8 +26,11 @@ class @Incident extends Minimongoid
   @priority: ->
     top = @last()
     Service.all().forEach (service) ->
-      console.log service.latestIncident()
-
+      current = service.latestIncident()
+      if current
+        console.log current
+        if current.priority > top.priority
+          top = current
     top
 
 Meteor.methods
