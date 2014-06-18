@@ -4,6 +4,9 @@ Template.home.rendered = ->
   document.title = "My New Meteor App"
   $("<meta>", { name: "description", content: "Page description for My New Meteor App" }).appendTo "head"
 
+  #Highlight the tab w/ highest priority
+  cl = ".#{Incident.priority().service().name.toLowerCase()}"
+  $(cl).addClass('selected')
 
 Template.home.helpers
 
@@ -14,9 +17,7 @@ Template.home.helpers
     incident = Incident.priority()
     if Session.get('service') isnt undefined
       service = Session.get('service')
-      incidents = Service.first({name:service}).incidents()
-      if incidents.length > 0
-        incident = incidents[incidents.length - 1]
+      incident = Service.first({name:service}).latestIncident()
     incident
 
   pastIncidents: ->

@@ -28,7 +28,6 @@ class @Incident extends Minimongoid
     Service.all().forEach (service) ->
       current = service.latestIncident()
       if current
-        console.log current
         if current.priority > top.priority
           top = current
     top
