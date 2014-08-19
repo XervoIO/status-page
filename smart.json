@@ -1,15 +1,11 @@
 {
   "packages": {
-    "iron-router": {},
+    "iron-router": {"version": "0.8.2"},
     "accounts-entry": {
-      "git": "https://github.com/Differential/accounts-entry.git",
-      "branch": "master"
     },
     "handlebars-server": {},
     "minimongoid": {},
     "simple-form": {
-      "git": "git@github.com:Differential/simple-form.git",
-      "branch": "master"
     },
     "timeago": {},
     "moment": {}

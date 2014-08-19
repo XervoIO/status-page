@@ -25,3 +25,6 @@ underscore-string-latest
 /handlebars-server
 /blaze-layout
 /accounts-t9n
+/iron-layout
+/iron-core
+/iron-dynamic-template
